@@ -1,56 +1,171 @@
-# Welcome to your Expo app 👋
+# Koin – Receipt Scan & Expense Review
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native mobile application developed as part of the **Koin Software Engineering Intern (React Native) Take-Home Challenge**.
 
-## Get started
+Koin Expenses simplifies expense tracking by allowing users to upload or capture receipt images, review extracted expense details, edit individual items, and save finalized expenses to their recent activity.
 
-1. Install dependencies
+## 1. Features
 
-   ```bash
-   npm install
-   ```
+- **Receipt Upload:** Select receipt images from the device gallery or capture them using the camera.
+- **Receipt Preview:** Preview the selected receipt before reviewing its details.
+- **Simulated Receipt Extraction:** Populate receipt information using predefined sample data.
+- **Editable Expense Details:** Modify merchant name, date, and expense category.
+- **Item Management:** Edit item names and prices, add new items, and delete existing items.
+- **Dynamic Total Calculation:** Automatically recalculate the total when items are edited, added, or removed.
+- **Input Validation:** Validate expense information before saving.
+- **Expense Management:** Save confirmed expenses and display them in the Recent Activity list.
 
-2. Start the app
+## 2. Technology Stack
 
-   ```bash
-   npx expo start
-   ```
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+- React Context API
+- React Hooks
+- Expo Image Picker
+- Expo Go
 
-In the output, you'll find options to open the app in a
+## 3. Project Structure
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```text
+koin-expenses/
+│
+├── assets/
+│   └── images/
+│
+├── scripts/
+│
+├── src/
+│   ├── app/
+│   │   ├── index.tsx
+│   │   ├── review.tsx
+│   │   ├── explore.tsx
+│   │   └── _layout.tsx
+│   │
+│   ├── components/
+│   │   ├── ui/
+│   │   ├── app-tabs.tsx
+│   │   ├── themed-text.tsx
+│   │   └── themed-view.tsx
+│   │
+│   ├── constants/
+│   │   └── theme.ts
+│   │
+│   ├── context/
+│   │   └── ExpensesContext.tsx
+│   │
+│   ├── hooks/
+│   │
+│   ├── types/
+│   │   └── expense.ts
+│   │
+│   └── global.css
+│
+├── .env.example
+├── app.json
+├── eas.json
+├── package.json
+├── package-lock.json
+└── README.md
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+### Architecture Overview
 
-### Other setup steps
+The application follows a component-based architecture using Expo Router for file-based navigation.
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+- **Screens:** The `src/app` directory contains the main Expenses and Review Receipt screens.
+- **Components:** Reusable UI components are organized under `src/components`.
+- **State Management:** React Context API is used to manage shared expense data through `ExpensesContext.tsx`.
+- **Types:** TypeScript definitions for expense-related data are maintained in `src/types`.
+- **Theme:** Shared theme constants are maintained in `src/constants`.
 
-## Learn more
+This structure separates application screens, reusable components, shared state, and data types to keep the code organized and maintainable.
 
-To learn more about developing your project with Expo, look at the following resources:
+## 4. Installation
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Clone the repository:
 
-## Join the community
+```bash
+git clone https://github.com/mathuthev6/koin-expense-review.git
+```
 
-Join our community of developers creating universal apps.
+Navigate to the project directory:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+cd koin-expenses
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+## 5. Running the Application
+
+Start the Expo development server:
+
+```bash
+npx expo start
+```
+
+Scan the displayed QR code using Expo Go on an Android or iOS device.
+
+Alternatively, use the available emulator or simulator options.
+
+## 6. Receipt Extraction
+
+The application uses simulated receipt extraction with predefined sample receipt data.
+
+When a user selects or captures a receipt image, the application displays a scanning/loading state and populates the receipt review screen with sample merchant information, date, category, and line items.
+
+This approach allows reviewers to test the complete receipt review workflow without requiring an external OCR service or AI API.
+
+**No external API keys or environment variables are required.**
+
+## 7. Testing
+
+The application was tested using Expo Go.
+
+The following functionality was tested:
+
+- Receipt image selection from the gallery.
+- Receipt image capture using the camera.
+- Receipt preview and simulated extraction.
+- Editing merchant details, date, and category.
+- Editing individual item names and prices.
+- Adding and deleting expense items.
+- Dynamic total recalculation.
+- Input validation.
+- Confirming and saving expenses.
+- Displaying saved expenses in Recent Activity.
+
+## 8. AI-Assisted Development
+
+ChatGPT was used as an AI-assisted development tool during the implementation process.
+
+It supported:
+
+- Understanding and breaking down assignment requirements.
+- Planning the application structure.
+- Generating implementation suggestions.
+- Troubleshooting and debugging.
+- Reviewing functionality and identifying potential edge cases.
+- Preparing project documentation.
+
+AI-generated suggestions were reviewed and adapted during development. The application was also tested through Expo Go to verify its functionality.
+
+## 9. Preview & Demo
+
+**Testing Platform:** Expo Go
+
+**Preview Instructions:** Clone the repository, install dependencies, and run `npx expo start` to launch the application. Scan the QR code using Expo Go.
+
+**Demo Video:** [Add your Loom video link here]
+
+---
+
+**Developed by Mathusa Theivendran**
+
+Koin Software Engineering Intern – Take-Home Challenge
