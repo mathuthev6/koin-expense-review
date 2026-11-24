@@ -162,7 +162,23 @@ AI-generated suggestions were reviewed and adapted during development. The appli
 
 **Preview Instructions:** Clone the repository, install dependencies, and run `npx expo start` to launch the application. Scan the QR code using Expo Go.
 
-**Demo Video:** [Add your Loom video link here]
+### Android APK
+
+[View Android Build & Install APK](https://expo.dev/accounts/mathusa/projects/koin-expenses/builds/45eeb4c5-0bbe-4ca4-9884-c7f4d99148af)
+
+The Android application was successfully built using EAS Build and tested on a physical Android device.
+
+### Expo EAS Update
+
+[View EAS Update Dashboard](https://expo.dev/accounts/mathusa/projects/koin-expenses/updates/335b855b-59fa-467b-b24c-16a1c753d281)
+
+### Demo Video
+
+Demo video coming soon.
+
+### Platform Compatibility
+
+The application is developed using React Native and Expo and is configured for both Android and iOS. Hands-on testing was performed on a physical Android device.
 
 ---
 
