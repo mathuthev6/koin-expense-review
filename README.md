@@ -93,7 +93,7 @@ git clone https://github.com/mathuthev6/koin-expense-review.git
 Navigate to the project directory:
 
 ```bash
-cd koin-expenses
+cd koin-expense-review
 ```
 
 Install dependencies:
@@ -126,9 +126,9 @@ This approach allows reviewers to test the complete receipt review workflow with
 
 ## 7. Testing
 
-The application was tested using Expo Go.
+The application was tested using Expo Go and a standalone Android APK installed on a physical Android device.
 
-The following functionality was tested:
+The following functionality was verified:
 
 - Receipt image selection from the gallery.
 - Receipt image capture using the camera.
@@ -140,6 +140,8 @@ The following functionality was tested:
 - Input validation.
 - Confirming and saving expenses.
 - Displaying saved expenses in Recent Activity.
+
+The standalone Android build was also installed and tested independently of Expo Go.
 
 ## 8. AI-Assisted Development
 
@@ -158,27 +160,34 @@ AI-generated suggestions were reviewed and adapted during development. The appli
 
 ## 9. Preview & Demo
 
-**Testing Platform:** Expo Go
-
-**Preview Instructions:** Clone the repository, install dependencies, and run `npx expo start` to launch the application. Scan the QR code using Expo Go.
-
-### Android APK
+### Android Testing Build
 
 [View Android Build & Install APK](https://expo.dev/accounts/mathusa/projects/koin-expenses/builds/45eeb4c5-0bbe-4ca4-9884-c7f4d99148af)
 
-The Android application was successfully built using EAS Build and tested on a physical Android device.
+The Android application was built using EAS Build, installed on a physical Android device, and tested successfully.
 
 ### Expo EAS Update
 
-[View EAS Update Dashboard](https://expo.dev/accounts/mathusa/projects/koin-expenses/updates/335b855b-59fa-467b-b24c-16a1c753d281)
+[View Published EAS Update](https://expo.dev/accounts/mathusa/projects/koin-expenses/updates/335b855b-59fa-467b-b24c-16a1c753d281)
+
+Note: The published update requires a compatible installed build and cannot be opened directly using standard Expo Go.
+
+### Local Testing with Expo Go
+
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Start the development server using `npx expo start`.
+4. Scan the QR code using Expo Go.
 
 ### Demo Video
 
-Demo video coming soon.
+[Watch Project Demonstration] (https://drive.google.com/drive/folders/1-XiDjtz2mM4QS4pzvRej9t39LVg7e8l3?usp=sharing)
 
 ### Platform Compatibility
 
-The application is developed using React Native and Expo and is configured for both Android and iOS. Hands-on testing was performed on a physical Android device.
+The application is developed using React Native and Expo and is configured for both Android and iOS.
+
+Hands-on testing was performed on a physical Android device. iOS device testing was not performed.
 
 ---
 
